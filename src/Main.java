@@ -20,9 +20,9 @@ public class Main {
 
         System.out.println("_______Задача №3_______");
 
-        int speed = 61;
+        int distance = 1;
 
-        checkSpeed(speed);
+        checkDilivery(distance);
 
         System.out.println();
 
@@ -51,13 +51,19 @@ public class Main {
         System.out.println();
     }
 
-    public static void checkSpeed(int speed) {
-        speed = Math.abs(speed);
-        if (speed < 60) {
-            System.out.println("Если скорость " + speed + " км/ч, то можно ездить спокойно.");
-
+    public static void checkDilivery(int distance) {
+        byte timeOfDilivery = 0;
+        if (0 <= distance && distance <= 20) {
+            timeOfDilivery++;
+            System.out.println("Потребуется дней: " + timeOfDilivery);
+        } else if (20 < distance && distance <= 60) {
+            timeOfDilivery += 2;
+            System.out.println("Потребуется дней: " + timeOfDilivery);
+        } else if (60 < distance && distance <= 100) {
+            timeOfDilivery += 3;
+            System.out.println("Потребуется дней: " + timeOfDilivery);
         } else {
-            System.out.println("Если скорость " + speed + " км/ч, то придётся заплатить штраф.");
+            System.out.println("Доставка не предусмотрена");
         }
     }
 }
