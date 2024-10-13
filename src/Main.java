@@ -20,9 +20,9 @@ public class Main {
 
         System.out.println("_______Задача №3_______");
 
-        int distance = 1;
+        int distance = 95;
 
-        checkDilivery(distance);
+        checkDelivery(distance);
 
         System.out.println();
 
@@ -51,17 +51,17 @@ public class Main {
         System.out.println();
     }
 
-    public static void checkDilivery(int distance) {
-        byte timeOfDilivery = 0;
+    public static void checkDelivery(int distance) {
+        byte timeOfDelivery = 0;
         if (0 <= distance && distance <= 20) {
-            timeOfDilivery++;
-            System.out.println("Потребуется дней: " + timeOfDilivery);
+            timeOfDelivery++;
+            System.out.println("Потребуется дней: " + timeOfDelivery);
         } else if (20 < distance && distance <= 60) {
-            timeOfDilivery += 2;
-            System.out.println("Потребуется дней: " + timeOfDilivery);
+            timeOfDelivery += 2;
+            System.out.println("Потребуется дней: " + timeOfDelivery);
         } else if (60 < distance && distance <= 100) {
-            timeOfDilivery += 3;
-            System.out.println("Потребуется дней: " + timeOfDilivery);
+            timeOfDelivery += 3;
+            System.out.println("Потребуется дней: " + timeOfDelivery);
         } else {
             System.out.println("Доставка не предусмотрена");
         }
