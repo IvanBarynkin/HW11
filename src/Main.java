@@ -11,8 +11,8 @@ public class Main {
 
         System.out.println("_______Задача №2_______");
 
-        year = 2014;
-        byte OS = 1;
+        year = 2016;
+        byte OS = 0;
 
         checkOSYear(OS, year);
 
@@ -38,15 +38,15 @@ public class Main {
     }
 
     public static void checkOSYear(byte clientOS, int clientDeviceYear) {
-
-        if (clientOS == 1 && clientDeviceYear > 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке: ");
-        } else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке: ");
-        } else if (clientOS == 0 && clientDeviceYear > 2015) {
-            System.out.println("Установите версию приложения для  iOS по ссылке: ");
+        if (clientDeviceYear > 2015) {
+            System.out.print("Установите версию приложения для ");
         } else {
-            System.out.println("Установите облегченную версию приложения для  iOS по ссылке: ");
+            System.out.print("Установите облегченную версию приложения для ");
+        }
+        if (clientOS == 1) {
+            System.out.println("Android по ссылке:");
+        } else {
+            System.out.println("IOs по ссылке:");
         }
         System.out.println();
     }
@@ -56,13 +56,16 @@ public class Main {
         if (0 <= distance && distance <= 20) {
             timeOfDelivery++;
             System.out.println("Потребуется дней: " + timeOfDelivery);
-        } else if (20 < distance && distance <= 60) {
+        }
+        if (20 < distance && distance <= 60) {
             timeOfDelivery += 2;
             System.out.println("Потребуется дней: " + timeOfDelivery);
-        } else if (60 < distance && distance <= 100) {
+        }
+        if (60 < distance && distance <= 100) {
             timeOfDelivery += 3;
             System.out.println("Потребуется дней: " + timeOfDelivery);
-        } else {
+        }
+        if (100 < distance) {
             System.out.println("Доставка не предусмотрена");
         }
     }
